@@ -4,6 +4,7 @@ employee_count_str = input("Please enter how many employees you wish to enter:")
 employee_count = int(employee_count_str)
 
 #   Loop through employees
+total_age = 0
 for employee_index in range(employee_count):
     #   Read first name, last name and age
 
@@ -17,13 +18,24 @@ for employee_index in range(employee_count):
         if len(last_name.strip()) > 0:
             break
 
-    age_str = input("Please Enter the Age:")
+    while True:
+        age_str = input("Please Enter the Age:")
 
-    age = int(age_str)
+        if age_str.isdigit():
+            age = int(age_str)
+            if (age >= 18) and (age <= 100):
+                total_age = total_age + age
+                break
+            else:
+                print("The age should be a digit between 18 and 100")
+        else:
+            print("The age should contain only digits")
 
     print(f"Employee Data: First Name: {first_name}, Last Name: {last_name}, Age: {age}")
-#   Check that first name, last are not empty
+    print(f"Total Age = {total_age}")
 
-#   Check that employee age is between 18 and 100
+if total_age > 500:
+    print("Warning: the total age for all employees is more than 500")
+else:
+    print("Warning: the total is less than 500")
 
-#   Check the total ages isn't more than 500
