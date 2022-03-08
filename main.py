@@ -6,7 +6,11 @@ employee_count = int(employee_count_str)
 #   Loop through employees
 for employee_index in range(employee_count):
     #   Read first name, last name and age
-    first_name = input("Please Enter The First Name:")
+
+    while True:
+        first_name = input("Please Enter The First Name:")
+        if len(first_name.strip()) > 0:
+            break
 
     last_name = input("Please Enter The Last Name:")
 
