@@ -12,7 +12,10 @@ for employee_index in range(employee_count):
         if len(first_name.strip()) > 0:
             break
 
-    last_name = input("Please Enter The Last Name:")
+    while True:
+        last_name = input("Please Enter The Last Name:")
+        if len(last_name.strip()) > 0:
+            break
 
     age_str = input("Please Enter the Age:")
 
