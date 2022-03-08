@@ -1,16 +1,22 @@
-# This is a sample Python script.
+#   Read how many employees you need to enter
+employee_count_str = input("Please enter how many employees you wish to enter:")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+employee_count = int(employee_count_str)
 
+#   Loop through employees
+for employee_index in range(employee_count):
+    #   Read first name, last name and age
+    first_name = input("Please Enter The First Name:")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    last_name = input("Please Enter The Last Name:")
 
+    age_str = input("Please Enter the Age:")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    age = int(age_str)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(f"Employee Data: First Name: {first_name}, Last Name: {last_name}, Age: {age}")
+#   Check that first name, last are not empty
+
+#   Check that employee age is between 18 and 100
+
+#   Check the total ages isn't more than 500
